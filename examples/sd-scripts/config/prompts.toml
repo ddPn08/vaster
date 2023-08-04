@@ -1,0 +1,27 @@
+[prompt]
+negative_prompt = "nsfw, (worst quality, low quality, normal quality:1.2), (bad anatomy, bad hands, missing fingers, extra digit, fewer digits:1.1),"
+sample_steps = 25
+
+[[prompt.subset]]
+prompt = "masterpiece, best quality, 1girl, solo, short hair, messy hair, black hair, white hoodie, full body"
+width = 896
+height = 1280
+seed = 1
+
+[[prompt.subset]]
+prompt = "masterpiece, best quality, 1girl, solo, short hair, messy hair, black hair, white hoodie, full body"
+width = 1024
+height = 1024
+seed = 1
+
+[[prompt.subset]]
+prompt = "masterpiece, best quality, 1girl, solo, short hair, messy hair, black hair, nude, large breasts, nipples, full body"
+width = 896
+height = 1280
+seed = 1
+
+[[prompt.subset]]
+prompt = "masterpiece, best quality, 1girl"
+width = 1024
+height = 1024
+seed = 1

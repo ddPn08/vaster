@@ -1,0 +1,44 @@
+[sd_models_arguments]
+v2 = false
+v_parameterization = false
+pretrained_model_name_or_path = "stabilityai/stable-diffusion-xl-base-1.0"
+
+[dataset_arguments]
+debug_dataset = false
+cache_latents = false
+
+[training_arguments]
+output_dir = "./outputs"
+output_name = "output-model"
+save_every_n_epochs = 25
+mem_eff_attn = false
+xformers = true
+max_train_epochs = 50
+persistent_data_loader_workers = true
+gradient_checkpointing = true
+gradient_accumulation_steps = 8
+mixed_precision = "bf16"
+max_token_length = 150
+
+logging_dir = "./logs"
+
+min_snr_gamma = 5
+caption_dropout_rate = 0.5
+
+sample_every_n_epochs = 5
+sample_prompts = "./prompts.toml"
+sample_sampler = "k_euler_a"
+seed = 830
+
+[optimizer_arguments]
+optimizer_type = "lion"
+learning_rate = 4e-6
+lr_scheduler = "cosine_with_restarts"
+lr_warmup_steps = 0
+lr_scheduler_num_cycles = 2
+
+[config_arguments]
+dataset_config = "./dataset.toml"
+
+[sd_saving_arguments]
+save_model_as = "safetensors"
